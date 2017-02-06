@@ -49,7 +49,6 @@ cp config/database.yml.example config/database.yml
 sed -i 's|username: root|username: redmine|' /home/redmine/redmine/config/database.yml
 sed -i 's|password: ""|password: RedminePasswd|' /home/redmine/redmine/config/database.yml
 
-
 sudo -u redmine -H bundle install --without development test
 sudo -u redmine -H bundle exec rake generate_secret_token
 sudo -u redmine -H RAILS_ENV=production bundle exec rake db:migrate
