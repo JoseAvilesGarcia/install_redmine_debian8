@@ -15,6 +15,7 @@ a2enmod proxy
 a2enmod proxy_balancer
 a2enmod proxy_http
 a2enmod rewrite
+service apache2 restart
 
 ### Or Create Database/User in admin ISPConfig
 echo "CREATE DATABASE redmine CHARACTER SET utf8;
