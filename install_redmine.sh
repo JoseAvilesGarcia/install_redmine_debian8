@@ -52,7 +52,7 @@ sed -i 's|password: ""|password: RedminePasswd|' /home/redmine/redmine/config/da
 sudo -u redmine -H bundle install --without development test
 sudo -u redmine -H bundle exec rake generate_secret_token
 sudo -u redmine -H RAILS_ENV=production bundle exec rake db:migrate
-sudo -u redmine -H RAILS_ENV=production bundle exec rake redmine:load_default_data
+sudo -u redmine -H RAILS_ENV=production REDMINE_LANG=pt-BR bundle exec rake redmine:load_default_data
 
 mkdir -p /home/redmine/redmine/tmp/pids
 chown -R redmine:redmine /home/redmine
