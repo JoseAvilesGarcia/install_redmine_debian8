@@ -10,6 +10,7 @@ gem install unicorn
 gem install bundler
 gem install rake
 
+## Enable Modules in Apacha2
 a2enmod proxy
 a2enmod proxy_balancer
 a2enmod proxy_http
