@@ -32,7 +32,6 @@ tar -xvf redmine-3.3.2.tar.gz && rm -f redmine-3.3.2.tar.gz
 mv redmine-3.3.2 redmine
 
 cd /home/redmine/redmine
-
 echo "gem 'unicorn'" >> /home/redmine/redmine/Gemfile
 
 ### Configure Unicorn for Redmine
