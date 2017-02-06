@@ -3,7 +3,6 @@
 ## On Debian 64Bits
 ## Author: Nilton OS -- www.linuxpro.com.br
 ## Version: 0.1
-
 ### Tested on Debian 8.7 64Bits
 
 
