@@ -37,14 +37,15 @@ cd /home/redmine/redmine
 echo "gem 'unicorn'" >> /home/redmine/redmine/Gemfile
 
 ### Configure Unicorn for Redmine
-wget https://raw.github.com/defunkt/unicorn/master/examples/unicorn.conf.rb -O /home/redmine/redmine/config/unicorn.rb
+FILE_UNICORN=/home/redmine/redmine/config/unicorn.rb
+wget https://raw.github.com/defunkt/unicorn/master/examples/unicorn.conf.rb -O $FILE_UNICORN
 
-sed -i 's|listen 8080|listen 5000|' /home/redmine/redmine/config/unicorn.rb
-sed -i 's|/path/to/app/current|/home/redmine/redmine|' /home/redmine/redmine/config/unicorn.rb
-sed -i 's|/path/to/.unicorn.sock|/home/redmine/redmine/tmp/sockets/redmine.socket|' /home/redmine/redmine/config/unicorn.rb
-sed -i 's|/path/to/app/shared/pids/unicorn.pid|/home/redmine/redmine/tmp/pids/unicorn.pid|' /home/redmine/redmine/config/unicorn.rb
-sed -i 's|/path/to/app/shared/log/unicorn.stderr.log|/home/redmine/redmine/log/unicorn.stderr.log|' /home/redmine/redmine/config/unicorn.rb
-sed -i 's|/path/to/app/shared/log/unicorn.stdout.log|/home/redmine/redmine/log/unicorn.stdout.log|' /home/redmine/redmine/config/unicorn.rb
+sed -i 's|listen 8080|listen 5000|' $FILE_UNICORN
+sed -i 's|/path/to/app/current|/home/redmine/redmine|' $FILE_UNICORN
+sed -i 's|/path/to/.unicorn.sock|/home/redmine/redmine/tmp/sockets/redmine.socket|' $FILE_UNICORN
+sed -i 's|/path/to/app/shared/pids/unicorn.pid|/home/redmine/redmine/tmp/pids/unicorn.pid|' $FILE_UNICORN
+sed -i 's|/path/to/app/shared/log/unicorn.stderr.log|/home/redmine/redmine/log/unicorn.stderr.log|' $FILE_UNICORN
+sed -i 's|/path/to/app/shared/log/unicorn.stdout.log|/home/redmine/redmine/log/unicorn.stdout.log|' $FILE_UNICORN
 
 
 cp config/database.yml.example config/database.yml
