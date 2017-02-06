@@ -5,8 +5,6 @@
 ## Version: 0.1
 ### Tested on Debian 8.7 64Bits
 
-
-
 apt-get install -y ruby ruby-dev libmysqlclient-dev libmagickwand-dev
 gem install unicorn
 gem install bundler
